@@ -1,30 +1,100 @@
 " http://dougblack.io/words/a-good-vimrc.html
+" INSERTED FROM VIM-SENSIBLE
+
+if has('autocmd')
+    filetype plugin indent on
+endif
+if has('syntax') && !exists('g:syntax_on')
+    syntax enable
+endif
+
+" set autoindent
+set backspace=indent,eol,start
+set complete-=i
+" set smarttab
+
+set nrformats-=octals
+
+set ttimeout
+set ttimeoutlen=100
+
+set incsearch
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+endif
+
+set laststatus=2
+set ruler
+set wildmenu
+
+if !&scrolloff
+  set scrolloff=1
+endif
+if !&sidescrolloff
+  set sidescrolloff=5
+endif
+set display+=lastline
+
+if &encoding ==# 'latin1' && has('gui_running')
+  set encoding=utf-8
+endif
+
+if &listchars ==# 'eol:$'
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+endif
+
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j " Delete comment character when joining commented lines
+endif
+
+if has('path_extra')
+  setglobal tags-=./tags tags-=./tags; tags^=./tags;
+endif
+
+if &shell =~# 'fish$'
+  set shell=/bin/bash
+endif
+
+set autoread
+
+if &history < 1000
+  set history=1000
+endif
+if &tabpagemax < 50
+  set tabpagemax=50
+endif
+if !empty(&viminfo)
+  set viminfo^=!
+endif
+set sessionoptions-=options
+
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
+  set t_Co=16
+endif
+
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
+
+inoremap <C-U> <C-G>u<C-U>
+
 
 " APPEARANCE
-    syntax on
-    set t_Co=256
-    set background=dark
-
     set number
-    set numberwidth=9
-    highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-    " set cursorline
-    " set ruler
-    
-    highlight VertSplit cterm=none gui=none
+    set cursorline
     set fillchars+=vert:\ 
     
     set showcmd
-
-    set wildmenu
     set wildmode=full
     set lazyredraw
         
 " BINDINGS
-    set timeoutlen=1000 ttimeoutlen=0
     let mapleader = ","
     imap ii <Esc>
-
+    
     " SPLITS
         noremap <C-h> <C-w>h
         noremap <C-j> <C-w>j
@@ -40,15 +110,9 @@
     set tabstop=4
     set softtabstop=4
     set expandtab
-    set backspace=2
-
-" SEARCHING
-    set incsearch
-    set ignorecase
 
 " FILES AND FILETYPES
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-    set autoread
     set nobackup
     set nowritebackup
     set noswapfile
@@ -88,22 +152,36 @@
 
     Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-    " Plugin 'flazz/vim-colorschemes'
-
     Plugin 'nathanaelkane/vim-indent-guides'
-        " let g:indent_guides_enable_on_vim_startup = 1 
+        let g:indent_guides_enable_on_vim_startup = 1 
         let g:indent_guides_auto_colors = 0
         let g_indent_guides_start_level = 2 
         let g:indent_guides_guide_size = 1
         hi IndentGuidesOdd  ctermbg=black
         hi IndentGuidesEven ctermbg=black
 
-    " Plugin 'godlygeek/csapprox'
+    
+    Plugin 'Valloric/YouCompleteMe'
+
+" Plugin 'flazz/vim-colorschemes'
+    Plugin 'NLKNguyen/papercolor-theme'
+    Plugin 'endel/vim-github-colorscheme'
+    Plugin 'morhetz/gruvbox' 
+    Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" colorscheme default 
+" COLOURSCHEME SETTINGS 
+
+colorscheme gruvbox
+    set background=dark
+    let g:gruvbox_contrast_dark='hard'
+    let g:gruvbox_contrast_light='hard'
+    highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+    highlight VertSplit cterm=none gui=none
+
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
