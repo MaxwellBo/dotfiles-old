@@ -2,7 +2,7 @@
 export ZSH=/Users/Max/.oh-my-zsh
 
 #Login screen
-screenfetch
+#screenfetch
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/

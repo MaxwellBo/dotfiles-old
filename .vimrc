@@ -153,7 +153,7 @@ inoremap <C-U> <C-G>u<C-U>
     Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
     Plugin 'nathanaelkane/vim-indent-guides'
-        let g:indent_guides_enable_on_vim_startup = 1 
+        " let g:indent_guides_enable_on_vim_startup = 1 
         let g:indent_guides_auto_colors = 0
         let g_indent_guides_start_level = 2 
         let g:indent_guides_guide_size = 1
@@ -163,6 +163,8 @@ inoremap <C-U> <C-G>u<C-U>
     
     Plugin 'Valloric/YouCompleteMe'
 
+    Plugin 'hdima/python-syntax'
+        let python_highlight_all = 1
 " Plugin 'flazz/vim-colorschemes'
     Plugin 'NLKNguyen/papercolor-theme'
     Plugin 'endel/vim-github-colorscheme'
@@ -178,7 +180,7 @@ filetype plugin indent on    " required
 colorscheme gruvbox
     set background=dark
     let g:gruvbox_contrast_dark='hard'
-    let g:gruvbox_contrast_light='hard'
+    let g:gruvbox_contrast_light='medium'
     highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
     highlight VertSplit cterm=none gui=none
 
