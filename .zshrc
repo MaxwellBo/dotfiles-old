@@ -1,1 +1,0 @@
-/Users/Max/.zprezto/runcoms/zshrc
