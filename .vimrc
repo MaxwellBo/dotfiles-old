@@ -7,7 +7,6 @@ if has('syntax') && !exists('g:syntax_on')
     syntax enable
 endif
 
-set nrformats-=octals
 
 if !&scrolloff
   set scrolloff=1
@@ -17,21 +16,26 @@ if !&sidescrolloff
 endif
 set display+=lastline
 
+
 if &encoding ==# 'latin1' && has('gui_running')
   set encoding=utf-8
 endif
+
 
 if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 endif
 
+
 if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j " Delete comment character when joining commented lines
 endif
 
+
 if has('path_extra')
   setglobal tags-=./tags tags-=./tags; tags^=./tags;
 endif
+
 
 if &shell =~# 'fish$'
   set shell=/bin/bash
@@ -47,12 +51,13 @@ endif
 if !empty(&viminfo)
   set viminfo^=!
 endif
-set sessionoptions-=options
+
 
 " Allow color schemes to do bright colors without forcing bold.
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
   set t_Co=16
 endif
+
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
@@ -60,8 +65,9 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 endif
 
 inoremap <C-U> <C-G>u<C-U>
+set sessionoptions-=options
+set nrformats-=octals
 
-" EDIT BEGINS HERE
 " http://dougblack.io/words/a-good-vimrc.html
 
 " APPEARANCE
@@ -143,6 +149,8 @@ inoremap <C-U> <C-G>u<C-U>
 
 " PLUGINS
 
+    Plugin 'tomtom/tcomment_vim'
+    
     Plugin 'scrooloose/nerdtree'
         map <C-n> :NERDTreeToggle<CR>
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -164,13 +172,11 @@ inoremap <C-U> <C-G>u<C-U>
     Plugin 'hdima/python-syntax'
         let python_highlight_all = 1
 
-    " Plugin 'flazz/vim-colorschemes'
     Plugin 'NLKNguyen/papercolor-theme'
     Plugin 'endel/vim-github-colorscheme'
     Plugin 'morhetz/gruvbox' 
     Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
     Plugin 'zeis/vim-kolor'
-    Plugin 'ciaranm/inkpot'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
