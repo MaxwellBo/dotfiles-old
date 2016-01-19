@@ -1,4 +1,3 @@
-" http://dougblack.io/words/a-good-vimrc.html
 " INSERTED FROM VIM-SENSIBLE
 
 if has('autocmd')
@@ -8,25 +7,7 @@ if has('syntax') && !exists('g:syntax_on')
     syntax enable
 endif
 
-" set autoindent
-set backspace=indent,eol,start
-set complete-=i
-" set smarttab
-
 set nrformats-=octals
-
-set ttimeout
-set ttimeoutlen=100
-
-set incsearch
-" Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
-endif
-
-set laststatus=2
-set ruler
-set wildmenu
 
 if !&scrolloff
   set scrolloff=1
@@ -56,7 +37,6 @@ if &shell =~# 'fish$'
   set shell=/bin/bash
 endif
 
-set autoread
 
 if &history < 1000
   set history=1000
@@ -81,19 +61,28 @@ endif
 
 inoremap <C-U> <C-G>u<C-U>
 
+" EDIT BEGINS HERE
+" http://dougblack.io/words/a-good-vimrc.html
 
 " APPEARANCE
     set number
+    set numberwidth=9
     set cursorline
-    set fillchars+=vert:\ 
-    
+    set ruler
     set showcmd
+    set wildmenu
     set wildmode=full
     set lazyredraw
-        
+    set laststatus=2
+
 " BINDINGS
-    let mapleader = ","
+    let mapleader = " "
+    set ttimeout
+    set ttimeoutlen=100
     imap ii <Esc>
+
+    command Day set background=light | colorscheme GitHub
+    command Night set background=dark | colorscheme gruvbox 
     
     " SPLITS
         noremap <C-h> <C-w>h
@@ -110,33 +99,54 @@ inoremap <C-U> <C-G>u<C-U>
     set tabstop=4
     set softtabstop=4
     set expandtab
+    " set autoindent
+    set backspace=indent,eol,start
+    set complete-=i
+    " set smarttab
 
 " FILES AND FILETYPES
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+    set autoread
     set nobackup
     set nowritebackup
     set noswapfile
-    filetype indent on
+
+" SEARCHING
+    set incsearch
+    set ignorecase
+    " Use <C-L> to clear the highlighting of :set hlsearch.
+    if maparg('<C-L>', 'n') ==# ''
+        nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+    endif
 
 " VUNDLE 
     set nocompatible
     filetype off
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
+
     Plugin 'VundleVim/Vundle.vim'
 
-" PLUGINS
+    Plugin 'L9' " Plugin library
+    
+    Plugin 'tpope/vim-fugitive' " Git wrapper
 
-    Plugin 'ctrlpvim/ctrlp.vim'
+    Plugin 'ctrlpvim/ctrlp.vim' " Fast file open
         let g:ctrlp_match_window = 'bottom,order:ttb'
         let g:ctrlp_switch_buffer = 0
         let g:ctrlp_working_path_mode = 0
+    
+    Plugin 'git://git.wincent.com/command-t.git' " Fast file navigation
+
+    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
+
+
+" PLUGINS
 
     Plugin 'scrooloose/nerdtree'
         map <C-n> :NERDTreeToggle<CR>
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-    Plugin 'tpope/vim-fugitive'
 
     Plugin 'bling/vim-airline'
         set laststatus=2
@@ -146,43 +156,34 @@ inoremap <C-U> <C-G>u<C-U>
 
     Plugin 'easymotion/vim-easymotion'
 
-    Plugin 'L9'
+    Plugin 'Yggdroot/indentLine'
+        let g:indentLine_char = '·'
 
-    Plugin 'git://git.wincent.com/command-t.git'
-
-    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-    Plugin 'nathanaelkane/vim-indent-guides'
-        " let g:indent_guides_enable_on_vim_startup = 1 
-        let g:indent_guides_auto_colors = 0
-        let g_indent_guides_start_level = 2 
-        let g:indent_guides_guide_size = 1
-        hi IndentGuidesOdd  ctermbg=black
-        hi IndentGuidesEven ctermbg=black
-
-    
     Plugin 'Valloric/YouCompleteMe'
 
     Plugin 'hdima/python-syntax'
         let python_highlight_all = 1
-" Plugin 'flazz/vim-colorschemes'
+
+    " Plugin 'flazz/vim-colorschemes'
     Plugin 'NLKNguyen/papercolor-theme'
     Plugin 'endel/vim-github-colorscheme'
     Plugin 'morhetz/gruvbox' 
     Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-
+    Plugin 'zeis/vim-kolor'
+    Plugin 'ciaranm/inkpot'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+filetype indent on
 
 " COLOURSCHEME SETTINGS 
-
-colorscheme gruvbox
-    set background=dark
-    let g:gruvbox_contrast_dark='hard'
-    let g:gruvbox_contrast_light='medium'
-    highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-    highlight VertSplit cterm=none gui=none
+    colorscheme gruvbox
+        set background=dark
+        let g:gruvbox_contrast_dark='hard'
+        let g:gruvbox_contrast_light='hard'
+        " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+        highlight VertSplit cterm=none gui=none
+        set fillchars+=vert:\ 
 
 
 " To ignore plugin indent changes, instead use:
