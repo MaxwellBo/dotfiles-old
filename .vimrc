@@ -169,7 +169,7 @@ set nrformats-=octals
     Plugin 'Yggdroot/indentLine'
         let g:indentLine_char = '·'
 
-    Plugin 'Valloric/YouCompleteMe'
+    " Plugin 'Valloric/YouCompleteMe'
 
     Plugin 'hdima/python-syntax'
         let python_highlight_all = 1
