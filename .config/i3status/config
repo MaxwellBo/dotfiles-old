@@ -9,16 +9,20 @@
 general {
         colors = true
         interval = 5
+            color_good = "#7dbde8"
+            color_degraded = "#8eb300"
+            color_bad = "#c0392b"
 }
 
-order += "ipv6"
-order += "disk /"
+#order += "ipv6"
 order += "run_watch DHCP"
-order += "run_watch VPN"
+#order += "run_watch VPN"
 order += "wireless _first_"
 order += "ethernet _first_"
-order += "battery 0"
+order += "disk /"
 order += "load"
+order += "cpu_usage"
+order += "battery 0"
 order += "tztime local"
 
 wireless _first_ {
@@ -49,9 +53,13 @@ tztime local {
 }
 
 load {
-        format = "%1min"
+        format = "Load: %1min"
 }
 
 disk "/" {
-        format = "%avail"
+        format = "Disk: %percentage_used"
+}
+
+cpu_usage {
+        format = "CPU: %usage"
 }
