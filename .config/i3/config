@@ -160,7 +160,3 @@ gaps inner 32
 gaps outer 8
 
 exec --no-startup-id feh --bg-fill ~/Themeing/Wallpapers/1.jpg
-
-bar {
-    position top
-}
