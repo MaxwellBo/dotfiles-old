@@ -13,3 +13,4 @@ fi
 # Customize to your needs...
 
 alias subf="subl --command toggle_full_screen"
+alias workon="source bin/activate"

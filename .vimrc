@@ -150,7 +150,9 @@ set nrformats-=octals
 " PLUGINS
 
     Plugin 'tomtom/tcomment_vim'
-    
+
+    Plugin 'airblade/vim-gitgutter'
+
     Plugin 'scrooloose/nerdtree'
         map <C-n> :NERDTreeToggle<CR>
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
