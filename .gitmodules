@@ -1,3 +1,6 @@
 [submodule "Themeing/fonts"]
 	path = Themeing/fonts
 	url = https://github.com/powerline/fonts.git
+[submodule "Themeing/FiraCode"]
+	path = Themeing/FiraCode
+	url = https://github.com/tonsky/FiraCode.git
