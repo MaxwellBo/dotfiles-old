@@ -157,14 +157,14 @@ bar {
         position top
 }
 
-gaps inner 10
-gaps outer 4
+gaps inner 20
+gaps outer 8
 
 set $mode_gaps Toggle gaps: (1) on (2) off
 bindsym $mod+g mode "$mode_gaps"
 mode "$mode_gaps" {
-    bindsym 1 mode "default", gaps inner all set 10, gaps outer all set 4
-    bindsym 2 mode "default", gaps inner all set 1, gaps outer all set 1
+    bindsym 1 mode "default", gaps inner all set 20, gaps outer all set 8
+    bindsym 2 mode "default", gaps inner all set 2, gaps outer all set 0
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
