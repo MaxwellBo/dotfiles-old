@@ -171,6 +171,9 @@ set nrformats-=octals
 
     " Plugin 'Valloric/YouCompleteMe'
 
+    Plugin 'ervandew/supertab'
+        let g:SuperTabDefaultCompletionType = "<c-n>"
+
     Plugin 'hdima/python-syntax'
         let python_highlight_all = 1
 

@@ -159,4 +159,4 @@ bar {
 gaps inner 32
 gaps outer 8
 
-exec --no-startup-d feh --bg-fill ~Themeing/Wallpapers/MeW7xCe.jpg
+exec --no-startup-id feh --bg-fill ~/Themeing/Wallpapers/1.jpg
