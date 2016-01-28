@@ -156,17 +156,18 @@ bar {
         tray_output primary
         position top
 }
-
-gaps inner 20
-gaps outer 8
+# 20
+# 8
+gaps inner 48
+gaps outer 16
 
 set $mode_gaps Toggle gaps: (1) on (2) off
 bindsym $mod+g mode "$mode_gaps"
 mode "$mode_gaps" {
-    bindsym 1 mode "default", gaps inner all set 20, gaps outer all set 8
+    bindsym 1 mode "default", gaps inner all set 48, gaps outer all set 16
     bindsym 2 mode "default", gaps inner all set 2, gaps outer all set 0
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 
-exec --no-startup-id feh --bg-fill ~/Themeing/Wallpapers/1.jpg
+exec --no-startup-id feh --bg-fill ~/Themeing/Wallpapers/2.jpg
