@@ -4,3 +4,9 @@
 [submodule "Themeing/FiraCode"]
 	path = Themeing/FiraCode
 	url = https://github.com/tonsky/FiraCode.git
+[submodule "Themeing/Fonts/PowerlineFonts"]
+	path = Themeing/Fonts/PowerlineFonts
+	url = https://github.com/powerline/fonts
+[submodule "Themeing/Fonts/FiraCode"]
+	path = Themeing/Fonts/FiraCode
+	url = https://github.com/tonsky/FiraCode
