@@ -50,7 +50,7 @@ call plug#end()
         let g:gruvbox_contrast_light='hard'
         " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
         highlight VertSplit cterm=none gui=none
-        set fillchars+=vert:\
+        set fillchars+=vert:\ 
 
 " APPEARANCE
     set number
@@ -60,9 +60,7 @@ call plug#end()
 
 " BINDINGS
     let mapleader = " "
-    set ttimeout
-    set ttimeoutlen=100
-    imap ii <Esc>
+    map ii <Esc>
 
     command Day set background=light | colorscheme GitHub
     command Night set background=dark | colorscheme gruvbox
