@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'git://git.wincent.com/command-t.git' " Fast file navigation
 
-    Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
+    Plug 'rstacruz/sparkup' " HTML tag expansion
 
     Plug 'tomtom/tcomment_vim'
 
