@@ -9,18 +9,20 @@ call plug#begin('~/.vim/plugged')
 
     " Plug 'tpope/vim-repeat'
 
-    Plug 'ctrlpvim/ctrlp.vim' " Fast file open
-        let g:ctrlp_match_window = 'bottom,order:ttb'
-        let g:ctrlp_switch_buffer = 0
-        let g:ctrlp_working_path_mode = 0
-
-    Plug 'git://git.wincent.com/command-t.git' " Fast file navigation
-
     Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
 
     Plug 'tomtom/tcomment_vim' " or commentary.vim
 
     Plug 'airblade/vim-gitgutter'
+
+    Plug 'easymotion/vim-easymotion'
+
+    Plug 'https://github.com/wincent/command-t.git' " Fast file navigation
+
+    Plug 'ctrlpvim/ctrlp.vim' " Fast file open
+        let g:ctrlp_match_window = 'bottom,order:ttb'
+        let g:ctrlp_switch_buffer = 0
+        let g:ctrlp_working_path_mode = 0
 
     Plug 'scrooloose/nerdtree'
         map <C-n> :NERDTreeToggle<CR>
@@ -31,8 +33,6 @@ call plug#begin('~/.vim/plugged')
         let g:airline_powerline_fonts = 1
         " set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
-    Plug 'easymotion/vim-easymotion'
-
     Plug 'Yggdroot/indentLine'
         let g:indentLine_char = '·'
 
@@ -42,6 +42,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'hdima/python-syntax'
         let python_highlight_all = 1
 
+    Plug 'sheerun/vim-polyglot'
+		" set tabstop=4
+		" set softtabstop=4
+		" set shiftwidth=4
+		" set expandtab
+	
     Plug 'scrooloose/syntastic'
         set statusline+=%#warningmsg#
         set statusline+=%{SyntasticStatuslineFlag()}
@@ -52,7 +58,7 @@ call plug#begin('~/.vim/plugged')
         let g:syntastic_check_on_wq = 0
         let g:syntastic_python_python_exec = '/usr/local/bin/python3'
         
-    Plug 'Valloric/YouCompleteMe', "{ 'for': ['c', 'cpp'] }
+    Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'] }
     
     Plug 'Raimondi/delimitMate'
         imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
@@ -98,10 +104,6 @@ call plug#end()
 
 " EDITING
     set hidden
-    set tabstop=4
-    set softtabstop=4
-    set shiftwidth=4
-    set expandtab
 
 " SEARCHING
     set ignorecase
