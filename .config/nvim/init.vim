@@ -1,6 +1,13 @@
+" Note: Often commented out settings were "sane settings" included with the
+" plugin documentation.
+
 call plug#begin('~/.vim/plugged')
 
     Plug 'tpope/vim-fugitive' " Git wrapper
+
+    Plug 'tpope/vim-surround'
+
+    " Plug 'tpope/vim-repeat'
 
     Plug 'ctrlpvim/ctrlp.vim' " Fast file open
         let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -11,7 +18,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
 
-    Plug 'tomtom/tcomment_vim'
+    Plug 'tomtom/tcomment_vim' " or commentary.vim
 
     Plug 'airblade/vim-gitgutter'
 
@@ -29,11 +36,27 @@ call plug#begin('~/.vim/plugged')
     Plug 'Yggdroot/indentLine'
         let g:indentLine_char = '·'
 
-    Plug 'ervandew/supertab'
-        let g:SuperTabDefaultCompletionType = "<c-n>"
+    " Plug 'ervandew/supertab'
+       " let g:SuperTabDefaultCompletionType = "<c-n>"
 
     Plug 'hdima/python-syntax'
         let python_highlight_all = 1
+
+    Plug 'scrooloose/syntastic'
+        set statusline+=%#warningmsg#
+        set statusline+=%{SyntasticStatuslineFlag()}
+        set statusline+=%*
+        let g:syntastic_always_populate_loc_list = 1
+        let g:syntastic_auto_loc_list = 1
+        " let g:syntastic_check_on_open = 1
+        let g:syntastic_check_on_wq = 0
+        let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+        
+    Plug 'Valloric/YouCompleteMe', "{ 'for': ['c', 'cpp'] }
+    
+    Plug 'Raimondi/delimitMate'
+        imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
+        " inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'endel/vim-github-colorscheme'
