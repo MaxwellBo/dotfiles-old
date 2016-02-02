@@ -17,8 +17,6 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'easymotion/vim-easymotion'
 
-	Plug 'https://github.com/wincent/command-t.git' " Fast file navigation
-
 	Plug 'ctrlpvim/ctrlp.vim' " Fast file open
 		let g:ctrlp_match_window = 'bottom,order:ttb'
 		let g:ctrlp_switch_buffer = 0
@@ -58,7 +56,7 @@ call plug#begin('~/.vim/plugged')
 		let g:syntastic_check_on_wq = 0
 		let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 		
-	Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'] }
+	Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
 	
 	Plug 'Raimondi/delimitMate'
 		imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
