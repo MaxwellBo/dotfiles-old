@@ -18,9 +18,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'easymotion/vim-easymotion'
 
 	Plug 'ctrlpvim/ctrlp.vim' " Fast file open
-		let g:ctrlp_match_window = 'bottom,order:ttb'
-		let g:ctrlp_switch_buffer = 0
-		let g:ctrlp_working_path_mode = 0
+		" let g:ctrlp_match_window = 'bottom,order:ttb'
+		" let g:ctrlp_switch_buffer = 0
+		" let g:ctrlp_working_path_mode = 0
 
 	Plug 'scrooloose/nerdtree'
 		map <C-n> :NERDTreeToggle<CR>
