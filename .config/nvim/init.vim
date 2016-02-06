@@ -34,8 +34,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Yggdroot/indentLine'
 		let g:indentLine_char = '·'
 
-	" Plug 'ervandew/supertab'
-		" let g:SuperTabDefaultCompletionType = "<c-n>"
+	Plug 'ervandew/supertab'
+		let g:SuperTabDefaultCompletionType = "<c-n>"
 
 	Plug 'hdima/python-syntax'
 		let python_highlight_all = 1
@@ -56,7 +56,7 @@ call plug#begin('~/.vim/plugged')
 		let g:syntastic_check_on_wq = 0
 		let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 		
-	Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
+	" Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
 	
 	Plug 'Raimondi/delimitMate'
 		imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
