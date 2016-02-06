@@ -3,20 +3,24 @@
 
 call plug#begin('~/.vim/plugged')
 
+" GIT
 	Plug 'tpope/vim-fugitive' " Git wrapper
 
-	Plug 'tpope/vim-surround'
+	Plug 'airblade/vim-gitgutter'
 
+" EDITING HELP
+	Plug 'tpope/vim-surround'
 	" Plug 'tpope/vim-repeat'
 
 	Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
 
 	Plug 'tomtom/tcomment_vim' " or commentary.vim
 
-	Plug 'airblade/vim-gitgutter'
+	Plug 'Raimondi/delimitMate'
 
 	Plug 'easymotion/vim-easymotion'
 
+" FILE NAVIGATION
 	Plug 'ctrlpvim/ctrlp.vim' " Fast file open
 		" let g:ctrlp_match_window = 'bottom,order:ttb'
 		" let g:ctrlp_switch_buffer = 0
@@ -26,6 +30,7 @@ call plug#begin('~/.vim/plugged')
 		map <C-n> :NERDTreeToggle<CR>
 		autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" APPEARANCE
 	Plug 'bling/vim-airline'
 		set noshowmode
 		let g:airline_powerline_fonts = 1
@@ -33,7 +38,14 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'Yggdroot/indentLine'
 		let g:indentLine_char = '·'
+	
+	Plug 'NLKNguyen/papercolor-theme'
+	Plug 'endel/vim-github-colorscheme'
+	Plug 'morhetz/gruvbox'
+	Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+	Plug 'zeis/vim-kolor'
 
+" SYNTAX / COMPLETION / LINTING
 	Plug 'hdima/python-syntax'
 		let python_highlight_all = 1
 
@@ -52,8 +64,6 @@ call plug#begin('~/.vim/plugged')
 		" let g:syntastic_check_on_open = 1
 		let g:syntastic_check_on_wq = 0
 		let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-		
-	Plug 'Raimondi/delimitMate'
 	
 	Plug 'ervandew/supertab'
 		let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -62,23 +72,15 @@ call plug#begin('~/.vim/plugged')
 		imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 		" inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 	
-		
-	Plug 'NLKNguyen/papercolor-theme'
-	Plug 'endel/vim-github-colorscheme'
-	Plug 'morhetz/gruvbox'
-	Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-	Plug 'zeis/vim-kolor'
-
+	" Plug 'rdnetto/YCM-Generator'
+	
 call plug#end()
 
-" COLORSCHEME SETTINGS
-	colorscheme gruvbox
-		set background=dark
-		let g:gruvbox_contrast_dark='hard'
-		let g:gruvbox_contrast_light='hard'
-		" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-		highlight VertSplit cterm=none gui=none
-		set fillchars+=vert:\ 
+" EDITING
+	set hidden
+
+" SEARCHING
+	set ignorecase
 
 " APPEARANCE
 	set number
@@ -101,9 +103,14 @@ call plug#end()
 		set splitbelow
 		set splitright
 
-" EDITING
-	set hidden
+" COLORSCHEME SETTINGS
+	colorscheme gruvbox
+		set background=dark
+		let g:gruvbox_contrast_dark='hard'
+		let g:gruvbox_contrast_light='hard'
+		" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+		highlight VertSplit cterm=none gui=none
+		set fillchars+=vert:\ 
 
-" SEARCHING
-	set ignorecase
+
 
