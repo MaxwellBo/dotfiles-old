@@ -45,15 +45,15 @@ call plug#begin('~/.vim/plugged')
 	Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 	Plug 'zeis/vim-kolor'
 
-" SYNTAX / COMPLETION / LINTING
-	Plug 'hdima/python-syntax'
-		let python_highlight_all = 1
-
+" SYNTAX / LINTING
 	Plug 'sheerun/vim-polyglot'
 		" set tabstop=4
 		" set softtabstop=4
 		" set shiftwidth=4
 		" set expandtab
+	
+	Plug 'hdima/python-syntax'
+		let python_highlight_all = 1
 	
 	Plug 'scrooloose/syntastic'
 		set statusline+=%#warningmsg#
@@ -64,15 +64,18 @@ call plug#begin('~/.vim/plugged')
 		" let g:syntastic_check_on_open = 1
 		let g:syntastic_check_on_wq = 0
 		let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-	
+
+" COMPLETION
+	imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
+	" inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+
 	Plug 'ervandew/supertab'
 		let g:SuperTabDefaultCompletionType = "<c-n>"
 
 	" Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
-		imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
-		" inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 	
 	" Plug 'rdnetto/YCM-Generator'
+
 	
 call plug#end()
 
@@ -120,6 +123,4 @@ call plug#end()
 		" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 		highlight VertSplit cterm=none gui=none
 		set fillchars+=vert:\ 
-
-
 
