@@ -90,7 +90,6 @@ call plug#end()
 
 " BINDINGS
 	let mapleader = " "
-	map ii <Esc>
 
 	command Day set background=light | colorscheme GitHub
 	command Night set background=dark | colorscheme gruvbox
@@ -100,6 +99,16 @@ call plug#end()
 		noremap <C-j> <C-w>j
 		noremap <C-k> <C-w>k
 		noremap <C-l> <C-w>l
+		" tnoremap <A-h> <C-\><C-n><C-w>h
+		" tnoremap <A-j> <C-\><C-n><C-w>j
+		" tnoremap <A-k> <C-\><C-n><C-w>k
+		" tnoremap <A-l> <C-\><C-n><C-w>l
+		" nnoremap <A-h> <C-w>h
+		" nnoremap <A-j> <C-w>j
+		" nnoremap <A-k> <C-w>k
+		" nnoremap <A-l> <C-w>l
+ 
+
 		set splitbelow
 		set splitright
 
