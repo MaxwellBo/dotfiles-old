@@ -9,6 +9,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'airblade/vim-gitgutter'
 
 " EDITING HELP
+	Plug 'kshenoy/vim-signature'
+
+	Plug 'mhinz/vim-startify'
+
 	Plug 'tpope/vim-surround'
 	" Plug 'tpope/vim-repeat'
 
