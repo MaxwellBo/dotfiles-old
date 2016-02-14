@@ -20,13 +20,10 @@
       create: true
       relink: true
       force: true
-    ~/.zshrc
+    ~/.zshrc:
       path: zsh/zshrc
       relink: true
-    ~/.zshrc
-      path: zsh/zshrc
-      relink: true
-    ~/.zpreztorc
+    ~/.zpreztorc:
       path: zsh/zpreztorc
       relink: true
 
