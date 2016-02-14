@@ -5,6 +5,22 @@
     # ~/.tmux.conf: tmux.conf
     # ~/.vim: vim/
     # ~/.vimrc: vimrc
+    ~/.config/nvim/init.vim:
+      path: nvim.vim
+      create: true
+      relink: true
+      force: true
+    ~/.config/i3/config:
+      path: i3config
+      create: true
+      relink: true
+      force: true
+    ~/.config/i3status/config:
+      path: i3statusconfig
+      create: true
+      relink: true
+      force: true
 
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
+
+# - shell:
+  # - [git submodule update --init --recursive, Installing submodules]
