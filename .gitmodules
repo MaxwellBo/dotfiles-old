@@ -11,5 +11,5 @@
 	path = Themeing/gruvbox-contrib
 	url = https://github.com/morhetz/gruvbox-contrib
 [submodule ".dotfiles/dotbot"]
-	path = .dotfiles/dotbot
+	path = dotbot
 	url = https://github.com/anishathalye/dotbot
