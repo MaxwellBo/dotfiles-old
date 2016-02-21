@@ -10,6 +10,6 @@
 [submodule "Themeing/gruvbox-contrib"]
 	path = Themeing/gruvbox-contrib
 	url = https://github.com/morhetz/gruvbox-contrib
-[submodule ".dotfiles/dotbot"]
+[submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
