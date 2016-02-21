@@ -6,47 +6,49 @@ call plug#begin('~/.vim/plugged')
 " GIT
 	Plug 'tpope/vim-fugitive' " Git wrapper
 
-	Plug 'airblade/vim-gitgutter'
+	Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
 
 " EDITING HELP
-	Plug 'kshenoy/vim-signature'
+	Plug 'kshenoy/vim-signature' " Mark sidebar markers
 
-	Plug 'mhinz/vim-startify'
+	Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
 
-	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-surround' " Bindings for bracket wrapping, etc.
 	" Plug 'tpope/vim-repeat'
 
 	Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
 
 	Plug 'tomtom/tcomment_vim' " or commentary.vim
 
-	Plug 'Raimondi/delimitMate'
+	Plug 'Raimondi/delimitMate' " Auto close brackets
 
-	Plug 'easymotion/vim-easymotion'
+	Plug 'easymotion/vim-easymotion' " Fast jumping
 
-" FILE NAVIGATION
+" WORKFLOW SUPPORT
 	Plug 'ctrlpvim/ctrlp.vim' " Fast file open
 		" let g:ctrlp_match_window = 'bottom,order:ttb'
 		" let g:ctrlp_switch_buffer = 0
 		" let g:ctrlp_working_path_mode = 0
 
-	Plug 'scrooloose/nerdtree'
+	Plug 'scrooloose/nerdtree' " File navigation sidebar
 		map <C-n> :NERDTreeToggle<CR>
 		autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " APPEARANCE
-	Plug 'bling/vim-airline'
+	Plug 'mhinz/vim-startify' " Nice startup screen
+
+	Plug 'bling/vim-airline' " Nice status bar
 		set noshowmode
 		let g:airline_powerline_fonts = 1
 		" set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
-	Plug 'Yggdroot/indentLine'
+	Plug 'Yggdroot/indentLine' " Indent flagging 
 		let g:indentLine_char = '·'
 	
+	Plug 'morhetz/gruvbox' " The One True Scheme
 	Plug 'NLKNguyen/papercolor-theme'
-	Plug 'endel/vim-github-colorscheme'
-	Plug 'morhetz/gruvbox'
 	Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+	Plug 'endel/vim-github-colorscheme'
 	Plug 'zeis/vim-kolor'
 
 " SYNTAX / LINTING
