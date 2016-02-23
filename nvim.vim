@@ -46,6 +46,8 @@ call plug#begin('~/.vim/plugged')
 		let g:indentLine_char = '·'
 	
 	Plug 'morhetz/gruvbox' " The One True Scheme
+	Plug 'noahfrederick/vim-noctu' " Terminal dependent schemes
+
 	Plug 'NLKNguyen/papercolor-theme'
 	Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 	Plug 'endel/vim-github-colorscheme'
@@ -58,35 +60,23 @@ call plug#begin('~/.vim/plugged')
 		" set shiftwidth=4
 		" set expandtab
 	
+	Plug 'benekastah/neomake'
+
 	Plug 'hdima/python-syntax'
 		let python_highlight_all = 1
 	
-	Plug 'scrooloose/syntastic'
-		set statusline+=%#warningmsg#
-		set statusline+=%{SyntasticStatuslineFlag()}
-		set statusline+=%*
-		let g:syntastic_always_populate_loc_list = 1
-		let g:syntastic_auto_loc_list = 1
-		" let g:syntastic_check_on_open = 1
-		let g:syntastic_check_on_wq = 0
-		let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-
 " COMPLETION
-	imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
-	" inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
 	Plug 'ervandew/supertab'
 		let g:SuperTabDefaultCompletionType = "<c-n>"
+		imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
+		" ^ Ignores enter button in autocomplete box
+		" inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 	" Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
-	
-	" Plug 'rdnetto/YCM-Generator'
+		" Plug 'rdnetto/YCM-Generator'
 
 	
 call plug#end()
-
-" EDITING
-	set hidden
 
 " SEARCHING
 	set ignorecase
@@ -97,36 +87,36 @@ call plug#end()
 	set showcmd
 	set wildmode=full
 
+" BUFFER SETTINGS
+	set hidden	
+	set splitbelow
+	set splitright
+
 " BINDINGS
 	let mapleader = " "
 
-	command Day set background=light | colorscheme GitHub
-	command Night set background=dark | colorscheme gruvbox
-
-	" SPLITS
-		noremap <C-h> <C-w>h
-		noremap <C-j> <C-w>j
-		noremap <C-k> <C-w>k
-		noremap <C-l> <C-w>l
-		" tnoremap <A-h> <C-\><C-n><C-w>h
-		" tnoremap <A-j> <C-\><C-n><C-w>j
-		" tnoremap <A-k> <C-\><C-n><C-w>k
-		" tnoremap <A-l> <C-\><C-n><C-w>l
-		" nnoremap <A-h> <C-w>h
-		" nnoremap <A-j> <C-w>j
-		" nnoremap <A-k> <C-w>k
-		" nnoremap <A-l> <C-w>l
+	noremap <C-h> <C-w>h
+	noremap <C-j> <C-w>j
+	noremap <C-k> <C-w>k
+	noremap <C-l> <C-w>l
+	" tnoremap <A-h> <C-\><C-n><C-w>h
+	" tnoremap <A-j> <C-\><C-n><C-w>j
+	" tnoremap <A-k> <C-\><C-n><C-w>k
+	" tnoremap <A-l> <C-\><C-n><C-w>l
+	" nnoremap <A-h> <C-w>h
+	" nnoremap <A-j> <C-w>j
+	" nnoremap <A-k> <C-w>k
+	" nnoremap <A-l> <C-w>l
  
-
-		set splitbelow
-		set splitright
 
 " COLORSCHEME SETTINGS
 	colorscheme gruvbox
-		set background=dark
-		let g:gruvbox_contrast_dark='hard'
-		let g:gruvbox_contrast_light='hard'
-		" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-		highlight VertSplit cterm=none gui=none
-		set fillchars+=vert:\ 
-
+	" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	set background=dark
+	let g:gruvbox_contrast_dark='hard'
+	let g:gruvbox_contrast_light='hard'
+	
+	highlight VertSplit cterm=none gui=none
+	set fillchars+=vert:\ 
+	
+	" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE

@@ -20,13 +20,22 @@
       create: true
       relink: true
       force: true
-    ~/.zshrc:
-      path: zsh/zshrc
-      relink: true
     ~/.zpreztorc:
       path: zsh/zpreztorc
       relink: true
-
+    ~/.zprofile:
+      path: zsh/zprofile
+      relink: true
+    ~/.zshenv:
+      path: zsh/zshenv
+      relink: true
+    ~/.zshrc:
+      path: zsh/zshrc
+      relink: true
+    ~/.spacemacs:
+      path: spacemacs
+      relink: true
+      force: true
 
 - shell:
   - [git submodule update --remote --merge, Installing submodules]
