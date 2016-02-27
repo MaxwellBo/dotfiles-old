@@ -25,16 +25,16 @@ alias workon="source bin/activate"
 alias workoff="deactivate"
 
 # http://stackoverflow.com/questions/3375697/useful-gcc-flags-for-c
-alias ccwf=" 
+alias ccnf=" 
 clang \
 -Wall \
 -Wextra \
 -Wpedantic \
 -Wshadow \
 -Wstrict-prototypes \
-" # (c)ompile (C) (w)ith (f)lags
+" # (c)ompile (C) (n)ormal (f)lags
 
-alias ccwsf="
+alias ccsf="
 ccwf \
 -Wundef \
 -Wfloat-equal \
@@ -42,4 +42,4 @@ ccwf \
 -Wcast-align \
 -Wwrite-strings \
 -Waggregate-return \
-" # (c)ompile (C) (w)ith (s)trict (f)lags
+" # (c)ompile (C) (s)trict (f)lags
