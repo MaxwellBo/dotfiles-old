@@ -20,12 +20,17 @@
       create: true
       relink: true
       force: true
+    ~/.config/i3status/config:
+      path: i3statusconfig
+      create: true
+      relink: true
+      force: true
     ~/.tmux.conf:
       path: tmux.conf
       relink: true
       force: true
-    ~/.config/i3status/config:
-      path: i3statusconfig
+    ~/.ssh/config:
+      path: sshconfig
       create: true
       relink: true
       force: true
