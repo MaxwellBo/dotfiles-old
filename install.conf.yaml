@@ -2,17 +2,26 @@
 
 - link:
     # ~/.dotfiles: ''
-    # ~/.tmux.conf: tmux.conf
     # ~/.vim: vim/
     # ~/.vimrc: vimrc
+    # EDITORS
     ~/.config/nvim/init.vim:
       path: nvim.vim
       create: true
       relink: true
       force: true
+    ~/.spacemacs:
+      path: spacemacs
+      relink: true
+      force: true
+      # TERMINAL MANAGEMENT
     ~/.config/i3/config:
       path: i3config
       create: true
+      relink: true
+      force: true
+    ~/.tmux.conf:
+      path: tmux.conf
       relink: true
       force: true
     ~/.config/i3status/config:
@@ -20,6 +29,7 @@
       create: true
       relink: true
       force: true
+    # SHELL
     ~/.zpreztorc:
       path: zsh/zpreztorc
       relink: true
@@ -32,10 +42,6 @@
     ~/.zshrc:
       path: zsh/zshrc
       relink: true
-    ~/.spacemacs:
-      path: spacemacs
-      relink: true
-      force: true
 
 - shell:
   - [git submodule update --remote --merge, Installing submodules]
