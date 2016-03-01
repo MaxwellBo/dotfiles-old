@@ -23,6 +23,7 @@ alias vim="nvim"
 
 alias workon="source bin/activate"
 alias workoff="deactivate"
+alias scipy="cd ~/Code/COSC3000/SciPy; workon; jupyter notebook"
 
 # http://stackoverflow.com/questions/3375697/useful-gcc-flags-for-c
 alias ccnf=" 
