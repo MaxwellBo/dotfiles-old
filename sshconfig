@@ -1,3 +1,10 @@
-st *
-   ServerAliveInternal 300
-   ServerAliveCountMax 3
+Host centos 
+	HostName lichen.labs.eait.uq.edu.au
+	Port 22
+	User s4392687
+
+Host bsd 
+	HostName moss.labs.eait.uq.edu.au
+	Port 22
+	User s4392687
+
