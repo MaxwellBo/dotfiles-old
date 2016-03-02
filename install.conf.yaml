@@ -14,7 +14,7 @@
       path: spacemacs
       relink: true
       force: true
-      # TERMINAL MANAGEMENT
+    # TERMINAL MANAGEMENT
     ~/.config/i3/config:
       path: i3config
       create: true

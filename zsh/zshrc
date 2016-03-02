@@ -20,6 +20,7 @@ fi
 
 alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
 alias vim="nvim"
+alias jups="jupyter notebook"
 
 alias workon="source bin/activate"
 alias workoff="deactivate"
