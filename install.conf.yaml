@@ -10,6 +10,11 @@
       create: true
       relink: true
       force: true
+    ~/.vimrc:
+      path: nvim.vim
+      create: true
+      relink: true
+      force: true
     ~/.spacemacs:
       path: spacemacs
       relink: true
