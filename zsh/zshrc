@@ -18,7 +18,7 @@ fi
 # elif [[ "$OSTYPE" == "linux-gnu" ]]; then
 # fi
 
-alias lsd="ls -al"
+alias lsd="ls -alG"
 
 alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
 alias vim="nvim"
