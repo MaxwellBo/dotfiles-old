@@ -125,6 +125,6 @@ call plug#end()
 		" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 	endif
 	
-	if !has('nvim)
+	if !has('nvim')
 		colorscheme dracula
 	endif
