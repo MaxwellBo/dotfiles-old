@@ -126,5 +126,6 @@ call plug#end()
 	endif
 	
 	if !has('nvim')
+		set t_Co=256
 		colorscheme dracula
 	endif
