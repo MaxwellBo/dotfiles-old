@@ -78,7 +78,6 @@ call plug#begin('~/.vim/plugged')
 " VIM COMPATABILITY
 	if !has('nvim')
         	Plug 'tpope/vim-sensible'
-        	colorscheme dracula
     	endif
 
 call plug#end()
@@ -124,4 +123,8 @@ call plug#end()
 		highlight VertSplit cterm=none gui=none
 		set fillchars+=vert:\ 
 		" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+	endif
+	
+	if !has('nvim)
+		colorscheme dracula
 	endif
