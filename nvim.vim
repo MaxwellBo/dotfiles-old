@@ -114,18 +114,15 @@ call plug#end()
  
 
 " COLORSCHEME SETTINGS
-	if has('nvim')
-		colorscheme gruvbox
-		" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-		set background=dark
-		let g:gruvbox_contrast_dark='hard'
-		let g:gruvbox_contrast_light='hard'
-		highlight VertSplit cterm=none gui=none
-		set fillchars+=vert:\ 
-		" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-	endif
-	
 	if !has('nvim')
 		set t_Co=256
-		colorscheme dracula
 	endif
+	
+	colorscheme gruvbox
+	" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	set background=dark
+	let g:gruvbox_contrast_dark='hard'
+	let g:gruvbox_contrast_light='hard'
+	highlight VertSplit cterm=none gui=none
+	set fillchars+=vert:\ 
+	" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
