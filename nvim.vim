@@ -74,6 +74,13 @@ call plug#begin('~/.vim/plugged')
 
 	" Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
 		" Plug 'rdnetto/YCM-Generator'
+		
+		
+" VIM COMPATABILITY
+
+    if !has('nvim')
+        Plug 'tpope/vim-sensible'
+    endif
 
 	
 call plug#end()
