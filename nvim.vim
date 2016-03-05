@@ -76,9 +76,10 @@ call plug#begin('~/.vim/plugged')
 		" Plug 'rdnetto/YCM-Generator'
 
 " VIM COMPATABILITY
-    if !has('nvim')
-        Plug 'tpope/vim-sensible'
-    endif
+	if !has('nvim')
+        	Plug 'tpope/vim-sensible'
+        	colorscheme dracula
+    	endif
 
 call plug#end()
 
