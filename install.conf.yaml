@@ -34,11 +34,11 @@
       path: tmux.conf
       relink: true
       force: true
-    ~/.ssh/config:
-      path: sshconfig
-      create: true
-      relink: true
-      force: true
+    #~/.ssh/config:
+      #path: sshconfig
+      #create: true
+      #relink: true
+      #force: true
     # SHELL
     ~/.zpreztorc:
       path: zsh/zpreztorc
