@@ -42,8 +42,8 @@ call plug#begin('~/.vim/plugged')
 		let g:airline_powerline_fonts = 1
 		" set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
-	Plug 'Yggdroot/indentLine' " Indent flagging 
-		let g:indentLine_char = '·'
+	" Plug 'Yggdroot/indentLine' " Indent flagging 
+	" 	let g:indentLine_char = '·'
 	
 	Plug 'morhetz/gruvbox' " The One True Scheme
 	Plug 'noahfrederick/vim-noctu' " Terminal dependent schemes
