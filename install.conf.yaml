@@ -52,6 +52,10 @@
     ~/.zshrc:
       path: zsh/zshrc
       relink: true
+    ~/.bash_profile:
+      path: bash_profile
+      relink: true
+      force: true
 
 - shell:
   - [git submodule update --remote --merge, Installing submodules]
