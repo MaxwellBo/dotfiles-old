@@ -28,6 +28,22 @@ alias notc="jupyter nbconvert"
 alias workon="source bin/activate"
 alias workoff="deactivate"
 
+# http://gggritso.com/human-git-aliases
+alias branches="branch -a"
+alias tags="tag"
+alias stashes="stash list"
+
+alias unstage="reset -q HEAD --"
+alias discard="checkout --"
+alias uncommit="reset --mixed HEAD~"
+alias amend="commit --amend"
+
+alias nevermind="!git reset --hard HEAD && git clean -d -f"
+
+alias graph="graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order"
+
+alias precommit="diff --cached --diff-algorithm=minimal -w"
+
 # http://stackoverflow.com/questions/3375697/useful-gcc-flags-for-c
 alias ccnf=" 
 clang \
