@@ -19,3 +19,6 @@
 [submodule "Templates/MaxwellBo_template"]
 	path = Templates/MaxwellBo_template
 	url = https://gist.github.com/440f26970207a0fd6e69.git
+[submodule "Templates/readme-best-practices"]
+	path = Templates/readme-best-practices
+	url = https://github.com/jehna/readme-best-practices.git
