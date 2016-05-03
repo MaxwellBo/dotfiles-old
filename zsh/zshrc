@@ -40,7 +40,7 @@ alias amend="commit --amend"
 
 alias nevermind="!git reset --hard HEAD && git clean -d -f"
 
-alias graph="graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order"
+alias graph="log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order"
 
 alias precommit="diff --cached --diff-algorithm=minimal -w"
 
