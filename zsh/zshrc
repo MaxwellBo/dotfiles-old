@@ -28,21 +28,25 @@ alias notc="jupyter nbconvert"
 alias workon="source bin/activate"
 alias workoff="deactivate"
 
+alias ggraph="git log --graph --oneline --decorate"
+
+
 # http://gggritso.com/human-git-aliases
-alias branches="branch -a"
-alias tags="tag"
-alias stashes="stash list"
+alias gbranches="git branch -a"
+alias gtags="git tag"
+alias gstashes="git stash list"
 
-alias unstage="reset -q HEAD --"
-alias discard="checkout --"
-alias uncommit="reset --mixed HEAD~"
-alias amend="commit --amend"
+alias gunstage="git reset -q HEAD --"
+alias gdiscard="git checkout --"
+alias guncommit="git reset --mixed HEAD~"
+alias gamend="git commit --amend"
 
-alias nevermind="!git reset --hard HEAD && git clean -d -f"
+alias gnevermind="!git reset --hard HEAD && git clean -d -f"
 
-alias graph="log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order"
+alias ggraph2="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order"
 
-alias precommit="diff --cached --diff-algorithm=minimal -w"
+alias gprecommit="git diff --cached --diff-algorithm=minimal -w"
+
 
 # http://stackoverflow.com/questions/3375697/useful-gcc-flags-for-c
 alias ccnf=" 
