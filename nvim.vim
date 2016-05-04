@@ -24,6 +24,8 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'easymotion/vim-easymotion' " Fast jumping
 
+	Plug 'terryma/vim-multiple-cursors' " Sublime-like multicursor
+
 " WORKFLOW SUPPORT
 	Plug 'ctrlpvim/ctrlp.vim' " Fast file open
 		" let g:ctrlp_match_window = 'bottom,order:ttb'
