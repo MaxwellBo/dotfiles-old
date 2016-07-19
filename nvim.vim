@@ -63,9 +63,6 @@ call plug#begin('~/.vim/plugged')
 		" set expandtab
 	
 	Plug 'benekastah/neomake'
-
-	Plug 'hdima/python-syntax'
-		let python_highlight_all = 1
 	
 " COMPLETION
 	Plug 'ervandew/supertab'
