@@ -12,7 +12,6 @@
       force: true
     ~/.vimrc:
       path: nvim.vim
-      create: true
       relink: true
       force: true
     ~/.spacemacs:
@@ -55,7 +54,18 @@
     ~/.bash_profile:
       path: bash_profile
       relink: true
+    ~/.bash_profile:
+      path: bash_profile
+      relink: true
+    ~/.bashrc:
+      path: bashrc
+      relink: true
       force: true
+    ~/.sharedrc:
+      path: sharedrc
+      relink: true
+      force: true
+
 
 - shell:
   - [git submodule update --remote --merge, Installing submodules]
