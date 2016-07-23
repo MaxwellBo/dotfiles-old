@@ -39,18 +39,6 @@
       relink: true
       force: true
     # SHELL
-    ~/.zpreztorc:
-      path: zsh/zpreztorc
-      relink: true
-    ~/.zprofile:
-      path: zsh/zprofile
-      relink: true
-    ~/.zshenv:
-      path: zsh/zshenv
-      relink: true
-    ~/.zshrc:
-      path: zsh/zshrc
-      relink: true
     ~/.bash_profile:
       path: bash_profile
       relink: true
