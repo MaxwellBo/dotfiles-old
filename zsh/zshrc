@@ -13,3 +13,5 @@ fi
 export TERM=xterm-256color
 
 source ~/.sharedrc
+
+alias vim="nvim"

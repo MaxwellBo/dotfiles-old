@@ -1,7 +1,6 @@
 alias lsa="ls -alG"
 
 alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
-alias vim="nvim"
 alias nots="jupyter notebook --script"
 alias notc="jupyter nbconvert"
 
