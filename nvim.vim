@@ -76,8 +76,8 @@ call plug#begin('~/.vim/plugged')
 
 " VIM COMPATABILITY
 	if !has('nvim')
-        	Plug 'tpope/vim-sensible'
-    	endif
+			Plug 'tpope/vim-sensible'
+		endif
 
 call plug#end()
 
