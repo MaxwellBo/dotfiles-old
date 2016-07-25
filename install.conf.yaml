@@ -56,6 +56,10 @@
       path: gitconfig
       relink: true
       force: true
+    ~/.gitmessage.txt:
+      path: Templates/MaxwellBoGitTemplate/.git-commit-template.txt
+      relink: true
+      force: true
 
 
 - shell:
