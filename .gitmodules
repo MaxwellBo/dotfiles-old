@@ -13,12 +13,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "Templates/adeekshith_template"]
-	path = Templates/adeekshith_template
-	url = https://gist.github.com/cd4c95a064977cdc6c50.git
-[submodule "Templates/MaxwellBo_template"]
-	path = Templates/MaxwellBo_template
-	url = https://gist.github.com/440f26970207a0fd6e69.git
 [submodule "Templates/readme-best-practices"]
 	path = Templates/readme-best-practices
 	url = https://github.com/jehna/readme-best-practices.git
