@@ -42,15 +42,18 @@
     ~/.bash_profile:
       path: bash_profile
       relink: true
-    ~/.bash_profile:
-      path: bash_profile
-      relink: true
+      force: true
     ~/.bashrc:
       path: bashrc
       relink: true
       force: true
     ~/.sharedrc:
       path: sharedrc
+      relink: true
+      force: true
+    # GIT
+    ~/.gitconfig:
+      path: gitconfig
       relink: true
       force: true
 
