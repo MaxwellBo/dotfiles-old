@@ -1,12 +1,12 @@
-Host bsd 
-	HostName lichen.labs.eait.uq.edu.au
-	Port 22
-	User [REDACTED] 
-
-Host centos 
+Host moss 
 	HostName moss.labs.eait.uq.edu.au
 	Port 22
-	User [REDACTED] 
+	User REDACTED
+
+Host lichen 
+	HostName lichen.labs.eait.uq.edu.au
+	Port 22
+	User REDACTED
 
 Host vagrant
 	Hostname 127.0.0.1
