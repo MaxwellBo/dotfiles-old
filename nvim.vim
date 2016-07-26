@@ -36,7 +36,7 @@ call plug#begin('~/.vim/plugged')
 		" let g:ctrlp_working_path_mode = 0
 
 	Plug 'scrooloose/nerdtree' " File navigation sidebar
-		map <C-n> :NERDTreeToggle<CR>
+		map <C-m> :NERDTreeToggle<CR>
 		autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " APPEARANCE
