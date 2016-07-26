@@ -13,18 +13,21 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
 
-	Plug 'tpope/vim-surround' " Bindings for bracket wrapping, etc.
-	" Plug 'tpope/vim-repeat'
-
 	Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
-
-	Plug 'tomtom/tcomment_vim' " or commentary.vim
 
 	Plug 'Raimondi/delimitMate' " Auto close brackets
 
 	Plug 'easymotion/vim-easymotion' " Fast jumping
 
-	Plug 'terryma/vim-multiple-cursors' " Sublime-like multicursor
+	Plug 'terryma/vim-multiple-cursors' " <C-n>
+
+	Plug 'tomtom/tcomment_vim' " Comment highlighted with gc
+	" or commentary.vim
+
+	Plug 'tommcdo/vim-exchange' " Exchange lines with cx
+
+	Plug 'tpope/vim-surround' " Replace brackets with cs(from)(to) 
+	" Plug 'tpope/vim-repeat'
 
 " WORKFLOW SUPPORT
 	Plug 'ctrlpvim/ctrlp.vim' " Fast file open
