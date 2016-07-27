@@ -60,7 +60,7 @@ call plug#begin('~/.vim/plugged')
 
 " SYNTAX / LINTING
 	Plug 'sheerun/vim-polyglot'
-		" set tabstop=4
+		set tabstop=4
 		" set softtabstop=4
 		" set shiftwidth=4
 		" set expandtab
@@ -79,8 +79,8 @@ call plug#begin('~/.vim/plugged')
 
 " VIM COMPATABILITY
 	if !has('nvim')
-			Plug 'tpope/vim-sensible'
-		endif
+		Plug 'tpope/vim-sensible'
+	endif
 
 call plug#end()
 
