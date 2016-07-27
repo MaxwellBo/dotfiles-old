@@ -87,10 +87,14 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " VIM COMPATABILITY
-	if !has('nvim')
-		set t_Co=256
+	if has('nvim')
 		set listchars=eol:¬,tab:——,space:·
 		" set listchars+=trail:~,extends:>,precedes:<
+		" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	endif
+
+	if !has('nvim')
+		set t_Co=256
 	endif
 
 " SEARCHING
@@ -126,7 +130,6 @@ call plug#end()
 
 " COLORSCHEME SETTINGS
 	colorscheme gruvbox
-	" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 	set background=dark
 	let g:gruvbox_contrast_dark='hard'
 	let g:gruvbox_contrast_light='hard'
