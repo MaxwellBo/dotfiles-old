@@ -48,7 +48,7 @@ call plug#begin('~/.vim/plugged')
 		" set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
 	" Plug 'Yggdroot/indentLine' " Indent flagging 
-	" 	let g:indentLine_char = '·'
+		" let g:indentLine_char = '·'
 	
 	Plug 'morhetz/gruvbox' " The One True Scheme
 	Plug 'noahfrederick/vim-noctu' " Terminal dependent schemes
@@ -60,12 +60,14 @@ call plug#begin('~/.vim/plugged')
 
 " SYNTAX / LINTING
 	Plug 'sheerun/vim-polyglot'
+	
+	Plug 'benekastah/neomake'
+
+	Plug 'tpope/vim-sleuth'
 		set tabstop=4
 		" set softtabstop=4
 		" set shiftwidth=4
 		" set expandtab
-	
-	Plug 'benekastah/neomake'
 	
 " COMPLETION
 	Plug 'ervandew/supertab'
@@ -96,7 +98,7 @@ call plug#end()
 	" set listchars+=trail:~,extends:>,precedes:<
 
 " BUFFER SETTINGS
-	set hidden	
+	set hidden
 	set splitbelow
 	set splitright
 
