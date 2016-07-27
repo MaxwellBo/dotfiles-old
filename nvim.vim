@@ -92,6 +92,8 @@ call plug#end()
 	set cursorline
 	set showcmd
 	set wildmode=full
+	set listchars=eol:¬,tab:——,space:·
+	" set listchars+=trail:~,extends:>,precedes:<
 
 " BUFFER SETTINGS
 	set hidden	
