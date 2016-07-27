@@ -86,6 +86,13 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+" VIM COMPATABILITY
+	if !has('nvim')
+		set t_Co=256
+		set listchars=eol:¬,tab:——,space:·
+		" set listchars+=trail:~,extends:>,precedes:<
+	endif
+
 " SEARCHING
 	set ignorecase
 
@@ -94,8 +101,6 @@ call plug#end()
 	set cursorline
 	set showcmd
 	set wildmode=full
-	set listchars=eol:¬,tab:——,space:·
-	" set listchars+=trail:~,extends:>,precedes:<
 
 " BUFFER SETTINGS
 	set hidden
@@ -120,10 +125,6 @@ call plug#end()
  
 
 " COLORSCHEME SETTINGS
-	if !has('nvim')
-		set t_Co=256
-	endif
-	
 	colorscheme gruvbox
 	" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 	set background=dark
