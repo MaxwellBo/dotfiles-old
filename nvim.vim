@@ -4,135 +4,135 @@
 call plug#begin('~/.vim/plugged')
 
 " GIT
-	Plug 'tpope/vim-fugitive' " Git wrapper
+    Plug 'tpope/vim-fugitive' " Git wrapper
 
-	Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
+    Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
 
 " EDITING HELP
-	Plug 'kshenoy/vim-signature' " Mark sidebar markers
+    Plug 'kshenoy/vim-signature' " Mark sidebar markers
 
-	Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
+    Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
 
-	Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
+    Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
 
-	Plug 'Raimondi/delimitMate' " Auto close brackets
+    Plug 'Raimondi/delimitMate' " Auto close brackets
 
-	Plug 'easymotion/vim-easymotion' " Fast jumping
+    Plug 'easymotion/vim-easymotion' " Fast jumping
 
-	Plug 'terryma/vim-multiple-cursors' " <C-n>
+    Plug 'terryma/vim-multiple-cursors' " <C-n>
 
-	Plug 'tomtom/tcomment_vim' " Comment highlighted with gc
-	" or commentary.vim
+    Plug 'tomtom/tcomment_vim' " Comment highlighted with gc
+    " or commentary.vim
 
-	Plug 'tommcdo/vim-exchange' " Exchange lines with cx
+    Plug 'tommcdo/vim-exchange' " Exchange lines with cx
 
-	Plug 'tpope/vim-surround' " Replace brackets with cs(from)(to) 
-	" Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-surround' " Replace brackets with cs(from)(to) 
+    " Plug 'tpope/vim-repeat'
 
 " WORKFLOW SUPPORT
-	Plug 'ctrlpvim/ctrlp.vim' " Fast file open
-		" let g:ctrlp_match_window = 'bottom,order:ttb'
-		" let g:ctrlp_switch_buffer = 0
-		" let g:ctrlp_working_path_mode = 0
+    Plug 'ctrlpvim/ctrlp.vim' " Fast file open
+        " let g:ctrlp_match_window = 'bottom,order:ttb'
+        " let g:ctrlp_switch_buffer = 0
+        " let g:ctrlp_working_path_mode = 0
 
-	Plug 'scrooloose/nerdtree' " File navigation sidebar
-		map <C-m> :NERDTreeToggle<CR>
-		autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    Plug 'scrooloose/nerdtree' " File navigation sidebar
+        map <C-m> :NERDTreeToggle<CR>
+        autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " APPEARANCE
-	Plug 'mhinz/vim-startify' " Nice startup screen
+    Plug 'mhinz/vim-startify' " Nice startup screen
 
-	Plug 'bling/vim-airline' " Nice status bar
-		set noshowmode
-		let g:airline_powerline_fonts = 1
-		" set guifont=Liberation\ Mono\ for\ Powerline\ 10
+    Plug 'bling/vim-airline' " Nice status bar
+        set noshowmode
+        let g:airline_powerline_fonts = 1
+        " set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
-	" Plug 'Yggdroot/indentLine' " Indent flagging 
-		" let g:indentLine_char = '·'
-	
-	Plug 'morhetz/gruvbox' " The One True Scheme
-	Plug 'noahfrederick/vim-noctu' " Terminal dependent schemes
+    " Plug 'Yggdroot/indentLine' " Indent flagging 
+        " let g:indentLine_char = '·'
+    
+    Plug 'morhetz/gruvbox' " The One True Scheme
+    Plug 'noahfrederick/vim-noctu' " Terminal dependent schemes
 
-	Plug 'NLKNguyen/papercolor-theme'
-	Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-	Plug 'endel/vim-github-colorscheme'
-	Plug 'zeis/vim-kolor'
+    Plug 'NLKNguyen/papercolor-theme'
+    Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+    Plug 'endel/vim-github-colorscheme'
+    Plug 'zeis/vim-kolor'
 
 " SYNTAX / LINTING
-	Plug 'sheerun/vim-polyglot'
-	
-	Plug 'benekastah/neomake'
+    Plug 'sheerun/vim-polyglot'
+    
+    Plug 'benekastah/neomake'
 
-	Plug 'tpope/vim-sleuth'
-		set tabstop=4
-		" set softtabstop=4
-		" set shiftwidth=4
-		" set expandtab
-	
+    Plug 'tpope/vim-sleuth'
+        set tabstop=4
+        " set softtabstop=4
+        " set shiftwidth=4
+        " set expandtab
+    
 " COMPLETION
-	Plug 'ervandew/supertab'
-		let g:SuperTabDefaultCompletionType = "<c-n>"
-		imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
-		" ^ Ignores enter button in autocomplete box
-		" inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+    Plug 'ervandew/supertab'
+        let g:SuperTabDefaultCompletionType = "<c-n>"
+        imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
+        " ^ Ignores enter button in autocomplete box
+        " inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
-	" Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
-		" Plug 'rdnetto/YCM-Generator'
+    " Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
+        " Plug 'rdnetto/YCM-Generator'
 
 " VIM COMPATABILITY
-	if !has('nvim')
-		Plug 'tpope/vim-sensible'
-	endif
+    if !has('nvim')
+        Plug 'tpope/vim-sensible'
+    endif
 
 call plug#end()
 
 " VIM COMPATABILITY
-	if has('nvim')
-		set listchars=eol:¬,tab:——,space:·
-		" set listchars+=trail:~,extends:>,precedes:<
-		" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-	endif
+    if has('nvim')
+        set listchars=tab:——,eol:¬ " ——,
+        " set listchars+=space:·,trail:~,extends:>,precedes:<
+        " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    endif
 
-	if !has('nvim')
-		set t_Co=256
-	endif
+    if !has('nvim')
+        set t_Co=256
+    endif
 
 " SEARCHING
-	set ignorecase
+    set ignorecase
 
 " APPEARANCE
-	set number
-	set cursorline
-	set showcmd
-	set wildmode=full
+    set number
+    set cursorline
+    set showcmd
+    set wildmode=full
 
 " BUFFER SETTINGS
-	set hidden
-	set splitbelow
-	set splitright
+    set hidden
+    set splitbelow
+    set splitright
 
 " BINDINGS
-	let mapleader = " "
+    let mapleader = " "
 
-	noremap <C-h> <C-w>h
-	noremap <C-j> <C-w>j
-	noremap <C-k> <C-w>k
-	noremap <C-l> <C-w>l
-	" tnoremap <A-h> <C-\><C-n><C-w>h
-	" tnoremap <A-j> <C-\><C-n><C-w>j
-	" tnoremap <A-k> <C-\><C-n><C-w>k
-	" tnoremap <A-l> <C-\><C-n><C-w>l
-	" nnoremap <A-h> <C-w>h
-	" nnoremap <A-j> <C-w>j
-	" nnoremap <A-k> <C-w>k
-	" nnoremap <A-l> <C-w>l
- 
+    noremap <C-h> <C-w>h
+    noremap <C-j> <C-w>j
+    noremap <C-k> <C-w>k
+    noremap <C-l> <C-w>l
+    " tnoremap <A-h> <C-\><C-n><C-w>h
+    " tnoremap <A-j> <C-\><C-n><C-w>j
+    " tnoremap <A-k> <C-\><C-n><C-w>k
+    " tnoremap <A-l> <C-\><C-n><C-w>l
+    " nnoremap <A-h> <C-w>h
+    " nnoremap <A-j> <C-w>j
+    " nnoremap <A-k> <C-w>k
+    " nnoremap <A-l> <C-w>l
+
 
 " COLORSCHEME SETTINGS
-	colorscheme gruvbox
-	set background=dark
-	let g:gruvbox_contrast_dark='hard'
-	let g:gruvbox_contrast_light='hard'
-	highlight VertSplit cterm=none gui=none
-	set fillchars+=vert:\ 
-	" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+    colorscheme gruvbox
+    set background=dark
+    let g:gruvbox_contrast_dark='hard'
+    let g:gruvbox_contrast_light='hard'
+    highlight VertSplit cterm=none gui=none
+    set fillchars+=vert:\ 
+    " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
