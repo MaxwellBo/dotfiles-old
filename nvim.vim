@@ -88,7 +88,7 @@ call plug#end()
 
 " VIM COMPATABILITY
     if has('nvim')
-        set listchars=tab:——,eol:¬ " ——,
+        set listchars=tab:——,eol:¬,space:·
         " set listchars+=space:·,trail:~,extends:>,precedes:<
         " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
     endif
