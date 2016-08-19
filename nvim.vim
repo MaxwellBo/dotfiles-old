@@ -105,6 +105,7 @@ call plug#end()
     set cursorline
     set showcmd
     set wildmode=full
+    set colorcolumn=80
 
 " BUFFER SETTINGS
     set hidden
