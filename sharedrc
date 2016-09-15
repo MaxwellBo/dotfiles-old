@@ -19,7 +19,7 @@ alias git-amend="git commit --amend"
 
 alias git-nevermind="!git reset --hard HEAD && git clean -d -f"
 
-alias git-graph="git log --graph --oneline --decorate"
+alias git-adog="git log --all --decorate --oneline --graph"
 alias git-graph2="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order"
 
 alias git-precommit="git diff --cached --diff-algorithm=minimal -w"
