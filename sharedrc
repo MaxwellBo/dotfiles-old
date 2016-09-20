@@ -7,6 +7,11 @@ alias notc="jupyter nbconvert"
 alias workon="source bin/activate"
 alias workoff="deactivate"
 
+alias localhost="python3 -m http.server"
+
+# Git commit all prime
+alias gcap="git commit --all"
+
 # http://gggritso.com/human-git-aliases
 alias git-branches="git branch -a"
 alias git-tags="git tag"
