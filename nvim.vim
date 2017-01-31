@@ -100,6 +100,10 @@ call plug#end()
 " SEARCHING
     set ignorecase
 
+" BELL (this mutes it)
+set visualbell
+set t_vb=
+
 " APPEARANCE
     set number
     set cursorline

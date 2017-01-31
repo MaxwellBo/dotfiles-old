@@ -14,6 +14,10 @@
       path: nvim.vim
       relink: true
       force: true
+    ~/.ideavimrc:
+      path: ideavimrc
+      relink: true
+      force: true
     ~/.spacemacs:
       path: spacemacs
       relink: true
