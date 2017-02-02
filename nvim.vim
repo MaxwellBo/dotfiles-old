@@ -101,8 +101,8 @@ call plug#end()
     set ignorecase
 
 " BELL (this mutes it)
-set visualbell
-set t_vb=
+    set visualbell
+    set t_vb=
 
 " APPEARANCE
     set number
@@ -115,6 +115,7 @@ set t_vb=
     set hidden
     set splitbelow
     set splitright
+    set clipboard=unnamedplus
 
 " BINDINGS
     let mapleader = " "
