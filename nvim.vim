@@ -115,7 +115,7 @@ call plug#end()
     set hidden
     set splitbelow
     set splitright
-    set clipboard=unnamedplus
+    set clipboard+=unnamed
 
 " BINDINGS
     let mapleader = " "
