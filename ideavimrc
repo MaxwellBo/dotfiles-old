@@ -1,4 +1,4 @@
 set visualbell
 set noerrorbells
-set clipboard += unnamed
+set clipboard+=unnamed
 set surround

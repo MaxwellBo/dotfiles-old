@@ -22,6 +22,10 @@
       path: spacemacs
       relink: true
       force: true
+    ~/Library/Application Support/Code/User/settings.json:
+      path: Code/settings.json
+      relink: true
+      force: true
     # TERMINAL MANAGEMENT
     ~/.config/i3/config:
       path: i3
