@@ -6,15 +6,19 @@
     "editor.rulers": [80,100,120],
     "editor.lineHeight": 23,
     "editor.renderIndentGuides": true,
+    "files.trimTrailingWhitespace": true,
     "window.openFoldersInNewWindow": "on",
     "window.restoreFullscreen": true,
     "vim.useSystemClipboard": true,
     "vim.easymotion": true,
     "[markdown]" : {
-        "editor.formatOnSave": true,
         "editor.wrappingColumn": 80
     },
     "[haskell]" : {
+        "editor.fontFamily": "Fira Code",
+        "editor.fontLigatures": true
+    },
+    "[elm]" : {
         "editor.fontFamily": "Fira Code",
         "editor.fontLigatures": true
     }
