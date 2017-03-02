@@ -81,3 +81,5 @@ ccwf \
 -Wwrite-strings \
 -Waggregate-return \
 " # (c)ompile (C) (s)trict (f)lags
+
+source $HOME/.cargo/env
