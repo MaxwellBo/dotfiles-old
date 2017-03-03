@@ -5,8 +5,11 @@
 # Tell sbt to not use any other repositories than the ones specified in ~/.sbt/repositories
 export SBT_OPTS="-Dsbt.override.build.repos=true"
 
-# Tell SBT launcher where to read the ivy credentials, so that is uses them when fetching new SBT versions
+# Tell sbt launcher where to read the ivy credentials, so that is uses them when fetching new SBT versions
 export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
+
+# Find where Rust should be
+source $HOME/.cargo/env
 
 #########
 # UTILS #
@@ -82,4 +85,3 @@ ccwf \
 -Waggregate-return \
 " # (c)ompile (C) (s)trict (f)lags
 
-source $HOME/.cargo/env

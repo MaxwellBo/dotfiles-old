@@ -19,11 +19,13 @@
     },
     "[haskell]" : {
         "editor.fontFamily": "Fira Code",
-        "editor.fontLigatures": true
+        "editor.fontLigatures": true,
+        "editor.tabSize": 2
     },
     "[elm]" : {
         "editor.fontFamily": "Fira Code",
-        "editor.fontLigatures": true
+        "editor.fontLigatures": true,
+        "editor.tabSize": 2
     },
     "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "workbench.welcome.enabled": false,
