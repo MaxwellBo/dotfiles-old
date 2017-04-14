@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
 
-    Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
+    " Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
 
     Plug 'Raimondi/delimitMate' " Auto close brackets
 
@@ -50,18 +50,18 @@ call plug#begin('~/.vim/plugged')
     " Plug 'Yggdroot/indentLine' " Indent flagging 
         " let g:indentLine_char = '·'
     
-    Plug 'morhetz/gruvbox' " The One True Scheme
-    Plug 'noahfrederick/vim-noctu' " Terminal dependent schemes
+    " Plug 'noahfrederick/vim-noctu' " Terminal dependent schemes
+    " Plug 'zeis/vim-kolor'
 
+    Plug 'morhetz/gruvbox' " The One True Scheme
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
     Plug 'endel/vim-github-colorscheme'
-    Plug 'zeis/vim-kolor'
 
 " SYNTAX / LINTING
     Plug 'sheerun/vim-polyglot'
     
-    Plug 'benekastah/neomake'
+    " Plug 'benekastah/neomake'
 
     Plug 'tpope/vim-sleuth'
         set tabstop=4
