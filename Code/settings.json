@@ -1,6 +1,5 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.cursorStyle": "block",
     "editor.fontSize": 16,
     "editor.fontFamily": "DejaVu Sans Mono for Powerline",
     "editor.rulers": [80,100,120],
