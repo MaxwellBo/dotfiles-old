@@ -29,7 +29,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround' " Replace surroundings with cs(from)(to), delete surroundings with ds(char) 
     " Plug 'tpope/vim-repeat'
     
-    Plugin 'godlygeek/tabular' " :Tab/<character to align on>
+    Plug 'godlygeek/tabular' " :Tab/<character to align on>
 
 " WORKFLOW SUPPORT
     Plug 'ctrlpvim/ctrlp.vim' " Fast file open
