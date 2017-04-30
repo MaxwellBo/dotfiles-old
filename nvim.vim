@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
 
 " EDITING HELP
-    Plug 'kshenoy/vim-signature' " Mark sidebar markers
+    Plug 'kshenoy/vim-signature' " Put markers in sidebar
 
     Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
 
@@ -19,15 +19,17 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'easymotion/vim-easymotion' " Fast jumping
 
-    Plug 'terryma/vim-multiple-cursors' " <C-n>
+    Plug 'terryma/vim-multiple-cursors' " `<C-n>` TODO: Make this <C-d>
 
-    Plug 'tomtom/tcomment_vim' " Comment highlighted with gc
+    Plug 'tomtom/tcomment_vim' " Comment highlighted with `gc`
     " or commentary.vim
 
-    Plug 'tommcdo/vim-exchange' " Exchange lines with cx
+    Plug 'tommcdo/vim-exchange' " Exchange lines with `cx`
 
-    Plug 'tpope/vim-surround' " Replace brackets with cs(from)(to) 
+    Plug 'tpope/vim-surround' " Replace surroundings with cs(from)(to), delete surroundings with ds(char) 
     " Plug 'tpope/vim-repeat'
+    
+    Plugin 'godlygeek/tabular' " :Tab/<character to align on>
 
 " WORKFLOW SUPPORT
     Plug 'ctrlpvim/ctrlp.vim' " Fast file open
@@ -105,7 +107,7 @@ call plug#end()
     set t_vb=
 
 " APPEARANCE
-    set number
+    set number " line numbers
     set cursorline
     set showcmd
     set wildmode=full
@@ -115,7 +117,7 @@ call plug#end()
     set hidden
     set splitbelow
     set splitright
-    set clipboard+=unnamed
+    set clipboard+=unnamed " yank to system clipboard
 
 " COLORSCHEME SETTINGS
     colorscheme gruvbox
