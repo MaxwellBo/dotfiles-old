@@ -41,6 +41,10 @@ alias notc="jupyter nbconvert"
 # Git commit all prime
 alias gcap="git commit --all"
 
+# Git diff colour word
+alias gdcw="git diff --word-diff=color"
+alias gdwc="git diff --word-diff=color"
+
 alias git-precommit="git diff --cached --diff-algorithm=minimal -w"
 
 # http://gggritso.com/human-git-aliases
