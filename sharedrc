@@ -26,6 +26,7 @@ alias htopp="sudo htop --delay=300"
 alias localhost="python3 -m http.server"
 alias workon="source bin/activate"
 alias workoff="deactivate"
+alias makevenv="python3 -m venv .venv"
 
 ##############
 # CONTAINERS #

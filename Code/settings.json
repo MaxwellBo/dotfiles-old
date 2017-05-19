@@ -6,7 +6,6 @@
     "editor.lineHeight": 23,
     "editor.renderIndentGuides": true,
     "editor.minimap.enabled": true,
-    "vim.useSystemClipboard": true,
     "vim.easymotion": true,
     "[markdown]" : {
         "editor.wordWrap": "bounded",
@@ -26,6 +25,6 @@
     "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "workbench.welcome.enabled": false,
     "workbench.iconTheme": "vs-seti",
-    "python.linting.enabled": false,
-    "window.zoomLevel": 0
+    "workbench.editor.swipeToNavigate": true,
+    "python.linting.enabled": false
 }
