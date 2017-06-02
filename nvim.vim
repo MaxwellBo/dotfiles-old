@@ -32,10 +32,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'godlygeek/tabular' " :Tab/<character to align on>
 
 " WORKFLOW SUPPORT
+    " Plug 'cloudhead/neovim-fuzzy' " Fast file open
+    "     nnoremap <C-p> :FuzzyOpen<CR>
+
+    Plug 'airblade/vim-rooter' " Autoset working directory in the presence of project files
+
     Plug 'ctrlpvim/ctrlp.vim' " Fast file open
-        " let g:ctrlp_match_window = 'bottom,order:ttb'
-        " let g:ctrlp_switch_buffer = 0
-        " let g:ctrlp_working_path_mode = 0
+        let g:ctrlp_match_window = 'bottom,order:ttb'
+        let g:ctrlp_switch_buffer = 0
+        let g:ctrlp_working_path_mode = 0
 
     Plug 'scrooloose/nerdtree' " File navigation sidebar
         map <C-m> :NERDTreeToggle<CR>
