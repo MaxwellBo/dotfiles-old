@@ -62,7 +62,7 @@ call plug#begin('~/.vim/plugged')
 
 " SYNTAX / LINTING
     Plug 'sheerun/vim-polyglot'
-    
+
     " Plug 'benekastah/neomake'
 
     Plug 'tpope/vim-sleuth'
