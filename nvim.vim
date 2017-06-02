@@ -72,14 +72,17 @@ call plug#begin('~/.vim/plugged')
         " set expandtab
     
 " COMPLETION
-    Plug 'ervandew/supertab'
-        let g:SuperTabDefaultCompletionType = "<c-n>"
-        imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
+    " Plug 'ervandew/supertab'
+        " let g:SuperTabDefaultCompletionType = "<c-n>"
+        " imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
         " ^ Ignores enter button in autocomplete box
         " inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
     " Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
         " Plug 'rdnetto/YCM-Generator'
+    
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+        let g:deoplete#enable_at_startup = 1
 
 " VIM COMPATABILITY
     if !has('nvim')
