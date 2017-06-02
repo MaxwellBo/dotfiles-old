@@ -4,6 +4,7 @@
     "editor.fontFamily": "DejaVu Sans Mono for Powerline",
     "editor.rulers": [80,100,120],
     "editor.lineHeight": 23,
+    "editor.lineNumbers":"relative",
     "editor.renderIndentGuides": true,
     "editor.minimap.enabled": true,
     "vim.easymotion": true,

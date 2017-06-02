@@ -88,6 +88,8 @@ call plug#begin('~/.vim/plugged')
     
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         let g:deoplete#enable_at_startup = 1
+        let g:python3_host_prog = "/usr/local/bin/python3"
+
 
 " VIM COMPATABILITY
     if !has('nvim')
@@ -116,6 +118,7 @@ call plug#end()
 
 " APPEARANCE
     set number " line numbers
+    " set relativenumber
     set cursorline
     set showcmd
     set wildmode=full
