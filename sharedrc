@@ -9,7 +9,7 @@ export SBT_OPTS="-Dsbt.override.build.repos=true"
 export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
 
 # Find where Rust should be
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
 
 #########
 # UTILS #

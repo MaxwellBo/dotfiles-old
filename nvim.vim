@@ -75,6 +75,9 @@ call plug#begin('~/.vim/plugged')
         " set softtabstop=4
         " set shiftwidth=4
         " set expandtab
+        "
+    Plug 'derekwyatt/vim-scala'
+    Plug 'marconilanna/REPLesent', {'rtp': 'vim/'}
     
 " COMPLETION
     " Plug 'ervandew/supertab'

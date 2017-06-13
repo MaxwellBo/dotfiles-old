@@ -4,9 +4,7 @@
     "editor.fontFamily": "DejaVu Sans Mono for Powerline",
     "editor.rulers": [80,100,120],
     "editor.lineHeight": 23,
-    "editor.lineNumbers":"relative",
-    "editor.renderIndentGuides": true,
-    "editor.minimap.enabled": true,
+    // "editor.lineNumbers":"relative",
     "vim.easymotion": true,
     "[markdown]" : {
         "editor.wordWrap": "bounded",
@@ -25,7 +23,9 @@
     },
     "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "workbench.welcome.enabled": false,
-    "workbench.iconTheme": "vs-seti",
     "workbench.editor.swipeToNavigate": true,
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "nvim",
+    "vim.disableAnnoyingNeovimMessage": true
 }
