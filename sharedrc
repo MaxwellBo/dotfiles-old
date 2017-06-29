@@ -1,4 +1,5 @@
-#######
+#
+######
 # ENV #
 #######
 
@@ -18,6 +19,8 @@ export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
 alias lsa="ls -alG"
 alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
 alias htopp="sudo htop --delay=300"
+alias vim="nvim"
+
 
 ##########
 # PYTHON #
