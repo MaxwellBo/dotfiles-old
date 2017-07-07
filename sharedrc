@@ -65,6 +65,10 @@ alias git-nevermind="!git reset --hard HEAD && git clean -d -f"
 alias git-adog="git log --all --decorate --oneline --graph"
 alias git-graph2="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order"
 
+# http://gitless.com/
+alias git-cloak="git update-index --assume-unchanged"
+alias git-uncloak="git update-index --no-assume-unchanged"
+
 #######
 # GCC #
 #######
