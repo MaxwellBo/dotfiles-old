@@ -20,6 +20,12 @@ alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
 alias htopp="sudo htop --delay=300"
 alias vim="nvim"
 
+###############
+# FAT FINGERS #
+###############
+
+alias ripgrep="rg"
+alias rgrep="rg"
 
 ##########
 # PYTHON #
@@ -42,7 +48,7 @@ alias notc="jupyter nbconvert"
 #######
 
 # Git commit all prime
-alias gcap="git commit --all"
+alias gcap="git commit --all --verbose"
 
 # Git diff colour word
 alias gdcw="git diff --word-diff=color"
@@ -58,7 +64,7 @@ alias git-stashes="git stash list"
 alias git-unstage="git reset -q HEAD --"
 alias git-discard="git checkout --"
 alias git-uncommit="git reset --mixed HEAD~"
-alias git-amend="git commit --amend"
+alias git-amend="git commit --amend --verbose"
 
 alias git-nevermind="!git reset --hard HEAD && git clean -d -f"
 
