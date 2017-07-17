@@ -6,7 +6,8 @@ call plug#begin('~/.vim/plugged')
 " GIT
     Plug 'tpope/vim-fugitive' " Git wrapper
 
-    Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
+    " Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
+        " set g:gitgutter_log=1
 
 " EDITING HELP
     Plug 'kshenoy/vim-signature' " Put markers in sidebar
@@ -132,6 +133,7 @@ call plug#end()
     set splitbelow
     set splitright
     set clipboard+=unnamed " yank to system clipboard
+    set mouse=a
 
 " COLORSCHEME SETTINGS
     colorscheme gruvbox
