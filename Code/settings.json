@@ -32,10 +32,16 @@
         "editor.tabSize": 2
     },
     "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
-    "workbench.welcome.enabled": false,
+    "workbench.startupEditor": "none",
     "workbench.editor.swipeToNavigate": true,
     "python.linting.enabled": false,
     "vim.enableNeovim": true,
     "vim.neovimPath": "nvim",
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.disableAnnoyingNeovimMessage": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "window.newWindowDimensions": "fullscreen",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
+    "terminal.integrated.fontSize": 15
 }
