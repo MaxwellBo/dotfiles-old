@@ -35,7 +35,7 @@
     "workbench.startupEditor": "none",
     "workbench.editor.swipeToNavigate": true,
     "python.linting.enabled": false,
-    "vim.enableNeovim": true,
+    "vim.enableNeovim": false,
     "vim.neovimPath": "nvim",
     "vim.disableAnnoyingNeovimMessage": true,
     "workbench.editor.enablePreview": false,

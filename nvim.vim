@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 " GIT
     Plug 'tpope/vim-fugitive' " Git wrapper
 
+    " Currently disabled because of some weird bug on startup
     " Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
         " set g:gitgutter_log=1
 
@@ -44,7 +45,7 @@ call plug#begin('~/.vim/plugged')
         let g:ctrlp_working_path_mode = 0
 
     Plug 'scrooloose/nerdtree' " File navigation sidebar
-        map <C-m> :NERDTreeToggle<CR>
+        map <C-b> :NERDTreeToggle<CR>
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " APPEARANCE
@@ -84,7 +85,7 @@ call plug#begin('~/.vim/plugged')
     " Plug 'ervandew/supertab'
         " let g:SuperTabDefaultCompletionType = "<c-n>"
         " imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
-        " ^ Ignores enter button in autocomplete box
+        " ^ Accepts highlighted option on Enter, rather than inserting newline
         " inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
     " Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
@@ -133,7 +134,7 @@ call plug#end()
     set splitbelow
     set splitright
     set clipboard+=unnamed " yank to system clipboard
-    set mouse=a
+    set mouse=a " (a)ll modes
 
 " COLORSCHEME SETTINGS
     colorscheme gruvbox
