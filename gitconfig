@@ -4,6 +4,10 @@
 	email = max@maxbo.me
 [core]
 	excludesfile = /Users/Max/.gitignore_global
+[diff]
+    tool = code
+[difftool "code"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
