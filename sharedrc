@@ -1,4 +1,4 @@
-######
+#######
 # ENV #
 #######
 
@@ -8,17 +8,32 @@ export SBT_OPTS="-Dsbt.override.build.repos=true"
 # Tell sbt launcher where to read the ivy credentials, so that is uses them when fetching new SBT versions
 export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
 
+# - RUSTUP -
 # Find where Rust should be
 # source $HOME/.cargo/env
+
+# - NODE VERSION MANAGER -
+# export NVM_DIR="$HOME/.nvm"
+# . "/usr/local/opt/nvm/nvm.sh"
 
 #########
 # UTILS #
 #########
 
-alias lsa="ls -alG"
+if [ -x "$(command -v exa)" ]; then
+   alias ls="exa"
+   # sane default "exa -bghHliS"
+   alias lsa="ls --all --long --binary --header --time modified --git"
+else
+   alias lsa="ls -alhG"
+fi
+
+if [ -x "$(command -v nvim)" ]; then
+   alias vim="nvim"
+fi
+
 alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
 alias htopp="sudo htop --delay=300"
-alias vim="nvim"
 
 ###############
 # FAT FINGERS #
@@ -26,6 +41,13 @@ alias vim="nvim"
 
 alias ripgrep="rg"
 alias rgrep="rg"
+
+
+##########
+# FIXES ##
+##########
+
+# unalias mysql
 
 ##########
 # PYTHON #
