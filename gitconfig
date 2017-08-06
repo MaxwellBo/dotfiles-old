@@ -3,7 +3,9 @@
 	name = Max Bo
 	email = max@maxbo.me
 [core]
-	excludesfile = /Users/Max/.gitignore_global
+	excludesfile = ~/.gitignore_global
+[commit]
+	template = ~/.git-commit-template
 [diff]
     tool = code
 [difftool "code"]
@@ -14,5 +16,3 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = /Users/Max/dotfiles/git-commit-template

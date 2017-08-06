@@ -22,8 +22,12 @@
       path: spacemacs
       relink: true
       force: true
+    ~/.emacs:
+      path: emacs
+      relink: true
+      force: true
     ~/Library/Application Support/Code/User/settings.json:
-      path: Code/settings.json
+      path: VSCode/settings.json
       relink: true
       force: true
     # TERMINAL MANAGEMENT
@@ -64,8 +68,8 @@
       path: gitconfig
       relink: true
       force: true
-    ~/.gitmessage.txt:
-      path: Templates/MaxwellBoGitTemplate/.git-commit-template.txt
+    ~/.git-commit-template:
+      path: git-commit-template
       relink: true
       force: true
 
