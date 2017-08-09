@@ -26,9 +26,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tomtom/tcomment_vim' " Comment highlighted with `gc`
     " or commentary.vim
 
-    Plug 'tommcdo/vim-exchange' " Exchange lines with `cx`
+    Plug 'tommcdo/vim-exchange' " Exchange lines with `cx`, and 'X' in visual mode
 
-    Plug 'tpope/vim-surround' " Replace surroundings with cs(from)(to), delete surroundings with ds(char) 
+    Plug 'tpope/vim-surround' " Replace surroundings with cs(from)(to), delete surroundings with ds(char), add surroundings with y(object)(char)
     " Plug 'tpope/vim-repeat'
     
     Plug 'godlygeek/tabular' " :Tab/<character to align on>
