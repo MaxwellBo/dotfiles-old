@@ -16,9 +16,9 @@ export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
 # export NVM_DIR="$HOME/.nvm"
 # . "/usr/local/opt/nvm/nvm.sh"
 
-#########
-# UTILS #
-#########
+############
+# DROP-INS #
+############
 
 if [ -x "$(command -v exa)" ]; then
    alias ls="exa"
@@ -31,6 +31,14 @@ fi
 if [ -x "$(command -v nvim)" ]; then
    alias vim="nvim"
 fi
+
+if [ -x "$(command -v nvim)" ]; then
+   alias emacs=emacs-25.2
+fi 
+
+#########
+# UTILS #
+#########
 
 alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
 alias htopp="sudo htop --delay=300"
