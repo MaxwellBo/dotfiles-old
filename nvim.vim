@@ -11,6 +11,19 @@ call plug#begin('~/.vim/plugged')
         " set g:gitgutter_log=1
 
 " EDITING HELP
+    
+    Plug 'MaxwellBo/neoreader'
+    let g:enable_at_startup = 0
+    let g:speak_keypresses = 0
+    let g:speak_mode_transitions = 1
+    let g:interpret_generic_infix = 1
+    nnoremap <Leader>q :SpeakLine<cr>
+    nnoremap <Leader>w :SpeakLineDetail<cr>
+    nnoremap <Leader>e :SpeakLineExplain<cr>
+    vnoremap <Leader>a :SpeakRange<cr>
+    vnoremap <Leader>s :SpeakRangeDetail<cr>
+    vnoremap <Leader>d :SpeakRangeExplain<cr>
+
     Plug 'kshenoy/vim-signature' " Put markers in sidebar
 
     Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
