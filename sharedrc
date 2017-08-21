@@ -2,6 +2,7 @@
 # ENV #
 #######
 
+# - SCALA BUILD TOOL - 
 # Tell sbt to not use any other repositories than the ones specified in ~/.sbt/repositories
 export SBT_OPTS="-Dsbt.override.build.repos=true"
 
@@ -42,6 +43,11 @@ fi
 
 alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
 alias htopp="sudo htop --delay=300"
+
+# https://stackoverflow.com/a/25620447/5835579
+docx() { unzip -p $1 word/document.xml | sed -e 's/<[^>]\{1,\}>//g; s/[^[:print:]]\{1,\}//g' }
+
+docxn() { unzip -p $1 word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g; s/[^[:print:]\n]\{1,\}//g' }
 
 ###############
 # FAT FINGERS #
