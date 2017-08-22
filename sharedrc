@@ -68,7 +68,7 @@ alias rgrep="rg"
 ##########
 
 alias localhost="python3 -m http.server"
-alias workon="source bin/activate"
+alias workon="source .venv/bin/activate"
 alias workoff="deactivate"
 alias makevenv="python3 -m venv .venv && source .venv/bin/activate"
 
