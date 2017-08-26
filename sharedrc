@@ -55,6 +55,8 @@ docxn() { unzip -p $1 word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>
 
 alias ripgrep="rg"
 alias rgrep="rg"
+alias clip-copy="pbcopy"
+alias clip-paste="pbpaste"
 
 
 ##########
