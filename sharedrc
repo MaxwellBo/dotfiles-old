@@ -9,6 +9,9 @@ export SBT_OPTS="-Dsbt.override.build.repos=true"
 # Tell sbt launcher where to read the ivy credentials, so that is uses them when fetching new SBT versions
 export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
 
+alias ondebug='export SBT_OPTS="$SBT_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"'
+alias offdebug='SBT_OPTS=""'
+
 # - RUSTUP -
 # Find where Rust should be
 # source $HOME/.cargo/env

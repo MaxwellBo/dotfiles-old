@@ -51,5 +51,6 @@
     "window.newWindowDimensions": "fullscreen",
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
-    "terminal.integrated.fontSize": 15
+    "terminal.integrated.fontSize": 15,
+    "window.zoomLevel": 0
 }
