@@ -36,12 +36,12 @@ if [ -x "$(command -v nvim)" ]; then
    alias vim="nvim"
 fi
 
-if [ -x "$(command -v nvim)" ]; then
+if [ -x "$(command -v emacs-25.2)" ]; then
    alias emacs=emacs-25.2
 fi 
 
 if [ -x "$(command -v ccat)" ]; then
-   alias ccat=cat
+   alias cat='ccat --bg="dark"'
 fi 
 
 #########
