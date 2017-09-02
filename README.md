@@ -1,7 +1,3 @@
-Are you *shit hot*?
+# Max Bo's Dotfiles
 
-BREAKING NEWS!
-
-We are recruiting *shit hot* staff..
-
-Ask at the bar for more *shit hot* details!
+- [Installation guide](https://github.com/anishathalye/dotbot)
