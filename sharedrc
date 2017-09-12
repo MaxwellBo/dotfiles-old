@@ -4,13 +4,16 @@
 
 # - SCALA BUILD TOOL - 
 # Tell sbt to not use any other repositories than the ones specified in ~/.sbt/repositories
-export SBT_OPTS="-Dsbt.override.build.repos=true"
+
+SBT_OPTS_VAL="-Dsbt.override.build.repos=true"
+
+export SBT_OPTS=$SBT_OPTS_VAL
 
 # Tell sbt launcher where to read the ivy credentials, so that is uses them when fetching new SBT versions
 export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
 
 alias ondebug='export SBT_OPTS="$SBT_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"'
-alias offdebug='SBT_OPTS=""'
+alias offdebug='SBT_OPTS="$SBT_OPTS_VAL"'
 
 # - RUSTUP -
 # Find where Rust should be
