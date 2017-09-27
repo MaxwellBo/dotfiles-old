@@ -23,6 +23,9 @@ alias offdebug='SBT_OPTS="$SBT_OPTS_VAL"'
 # export NVM_DIR="$HOME/.nvm"
 # . "/usr/local/opt/nvm/nvm.sh"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 ############
 # DROP-INS #
 ############

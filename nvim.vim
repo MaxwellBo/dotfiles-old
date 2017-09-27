@@ -65,9 +65,9 @@ call plug#begin('~/.vim/plugged')
 " APPEARANCE
     Plug 'mhinz/vim-startify' " Nice startup screen
 
-    Plug 'bling/vim-airline' " Nice status bar
-        set noshowmode
-        let g:airline_powerline_fonts = 1
+    " Plug 'bling/vim-airline' " Nice status bar
+    "     set noshowmode
+    "     let g:airline_powerline_fonts = 1
         " set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
     " Plug 'Yggdroot/indentLine' " Indent flagging 
