@@ -10,6 +10,8 @@
     tool = code
 [difftool "code"]
     cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

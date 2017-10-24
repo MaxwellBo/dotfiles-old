@@ -70,6 +70,7 @@ alias ripgrep="rg"
 alias rgrep="rg"
 alias clip-copy="pbcopy"
 alias clip-paste="pbpaste"
+alias fff="fzf"
 
 
 ##########
