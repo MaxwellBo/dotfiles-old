@@ -32,6 +32,11 @@
         "editor.fontLigatures": true,
         "editor.tabSize": 2
     },
+    "[scala]" : {
+        "editor.fontFamily": "Fira Code",
+        "editor.fontLigatures": true,
+        "editor.tabSize": 2
+    },
     "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "workbench.startupEditor": "none",
     "workbench.editor.swipeToNavigate": true,
@@ -53,5 +58,11 @@
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
     "terminal.integrated.fontSize": 15,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "window.closeWhenEmpty": false,
+    "markdown-pdf.orientation": "landscape",
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true
 }
