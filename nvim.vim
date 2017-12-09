@@ -69,6 +69,10 @@ call plug#begin('~/.vim/plugged')
     "     set noshowmode
     "     let g:airline_powerline_fonts = 1
         " set guifont=Liberation\ Mono\ for\ Powerline\ 10
+    Plug 'itchyny/lightline.vim'
+    " let g:lightline = {
+    "       \ 'colorscheme': 'wombat',
+    "       \ }
 
     " Plug 'Yggdroot/indentLine' " Indent flagging 
         " let g:indentLine_char = '·'
@@ -143,12 +147,15 @@ call plug#end()
     set wildmode=full
     set colorcolumn=79
 
+" You don't know what you're missing if you don't use this.
+nmap <C-e> :e#<CR>
 " BUFFER SETTINGS
     set hidden
     set splitbelow
     set splitright
     set clipboard+=unnamed " yank to system clipboard
     set mouse=a " (a)ll modes
+    set autoread " only triggers if the buffer is clean compared to filesystem
 
 " COLORSCHEME SETTINGS
     colorscheme gruvbox
@@ -158,3 +165,4 @@ call plug#end()
     highlight VertSplit cterm=none gui=none
     set fillchars+=vert:\ 
     " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+    "
