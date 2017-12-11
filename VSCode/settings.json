@@ -37,7 +37,7 @@
         "editor.fontLigatures": true,
         "editor.tabSize": 2
     },
-    "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.startupEditor": "none",
     "workbench.editor.swipeToNavigate": true,
     "python.linting.enabled": false,
