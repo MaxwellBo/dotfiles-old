@@ -64,5 +64,6 @@
     "sublimeTextKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
 }
