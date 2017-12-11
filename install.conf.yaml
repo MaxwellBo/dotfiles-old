@@ -28,19 +28,10 @@
       force: true
     ~/Library/Application Support/Code/User/settings.json:
       path: VSCode/settings.json
+      create: true
       relink: true
       force: true
     # TERMINAL MANAGEMENT
-    ~/.config/i3/config:
-      path: i3
-      create: true
-      relink: true
-      force: true
-    ~/.config/i3status/config:
-      path: i3status
-      create: true
-      relink: true
-      force: true
     ~/.tmux.conf:
       path: tmux.conf
       relink: true
